@@ -1,5 +1,4 @@
 import throttle from "lodash.throttle";
-import Lodash from "lodash.throttle";
 
 const key = "feedback-form-state";
 const feedBack = document.querySelector(".feedback-form");
