@@ -16,12 +16,11 @@ function onInput() {
 }
 
 function saveInf() {
-    let newFormInf = localStorage.getItem('key');
+    const newFormInf = JSON.parse(localStorage.getItem(key));
     if (newFormInf) {
-        newFormInf = JSON.parse(newFornInf);
-        console.log(newFormInf);
-        Object.entries(newFormInf).forEach(([name, value]) => {
-            form.elements[name].value = value;
+        const inputDatas = Object.keys(newFormInf);
+        inputDatas.forEach(inputData => {
+            feedBack.elements[inputData].value = newFormInf[inputData]
         })
     }
 }
